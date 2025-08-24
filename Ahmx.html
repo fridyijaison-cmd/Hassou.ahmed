@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سوق Hassou</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: linear-gradient(to bottom, #d4ed91, #f7f78a);
+      margin: 0; padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #388e3c;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .product {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product h2 {
+      color: #388e3c;
+    }
+    .price {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #d32f2f; /* لون أحمر للسعر */
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .cart-btn {
+      background: #ff9800;
+      color: white;
+    }
+    .order-btn {
+      background: #388e3c;
+      color: white;
+    }
+    form {
+      margin-top: 15px;
+      display: none;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>🛒 سوق Hassou الإلكتروني</header>
+
+  <!-- === المنتجات التي كان عليها سعر === -->
+  <div class="product">
+    <img src="https://i.ibb.co/YTDJf03B/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="عصارة كهربائية">
+    <h2>عصارة كهربائية محمولة</h2>
+    <p class="price">السعر: 189 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('عصارة كهربائية محمولة')">➕ أضف إلى السلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/nN4B93DJ/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="كشاف شمسي">
+    <h2>كشاف يعمل بالطاقة الشمسية</h2>
+    <p class="price">السعر: 700 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('كشاف يعمل بالطاقة الشمسية')">➕ أضف إلى السلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/MxsZP389/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="لوح طاقة شمسية">
+    <h2>لوح طاقة شمسية متكامل</h2>
+    <p class="price">السعر: 600 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('لوح طاقة شمسية متكامل')">➕ أضف إلى السلة</button>
+  </div>
+
+  <!-- === المنتجات التي تمت إضافة سعرها واسمها === -->
+  <div class="product">
+    <img src="https://i.ibb.co/Gvxh0nrG/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="مصباح LED">
+    <h2>مصباح LED متعدد الألوان</h2>
+    <p class="price">السعر: 177 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('مصباح LED متعدد الألوان')">➕ أضف إلى السلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/rKjS0fwc/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="مصباح يدوي">
+    <h2>مصباح يدوي قوي</h2>
+    <p class="price">السعر: 177 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('مصباح يدوي قوي')">➕ أضف إلى السلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/GvsfR7Lb/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="مصباح تخييم">
+    <h2>مصباح تخييم عتيق</h2>
+    <p class="price">السعر: 177 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('مصباح تخييم عتيق')">➕ أضف إلى السلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/39vYGW8X/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="مصباح طوارئ">
+    <h2>مصباح طوارئ قابل للشحن</h2>
+    <p class="price">السعر: 177 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('مصباح طوارئ قابل للشحن')">➕ أضف إلى السلة</button>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/W4QBQd9K/Screenshot-2025-07-31-18-00-10-543-com-whatsapp.jpg" alt="مصباح حائط شمسي">
+    <h2>مصباح حائط بالطاقة الشمسية</h2>
+    <p class="price">السعر: 177 درهم</p>
+    <button class="btn cart-btn" onclick="showForm('مصباح حائط بالطاقة الشمسية')">➕ أضف إلى السلة</button>
+  </div>
+
+  <form id="orderForm">
+    <h3>📋 أرسل معلوماتك للطلب:</h3>
+    <input type="text" id="name" placeholder="الاسم الكامل" required><br>
+    <input type="text" id="address" placeholder="العنوان" required><br>
+    <input type="email" id="email" placeholder="البريد الإلكتروني" required><br>
+    <button type="button" class="btn order-btn" onclick="sendOrder()">✅ اطلب الآن</button>
+  </form>
+
+  <script>
+    let selectedProduct = "";
+
+    function showForm(product) {
+      selectedProduct = product;
+      document.getElementById("orderForm").style.display = "block";
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function sendOrder() {
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      const email = document.getElementById("email").value;
+
+      if (name && address && email) {
+        const phone = "212607072825"; // تأكد من أن هذا هو الرقم الصحيح
+        const message = `طلب جديد 🛒%0Aالمنتج: ${selectedProduct}%0Aالاسم: ${name}%0Aالعنوان: ${address}%0Aالبريد: ${email}`;
+        const url = `https://wa.me/${phone}?text=${message}`;
+        window.open(url, "_blank");
+      } else {
+        alert("الرجاء إدخال جميع المعلومات!");
+      }
+    }
+  </script>
+</body>
+</html>
